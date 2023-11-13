@@ -1,0 +1,36 @@
+
+
+.newLink {
+  background-color: #fafafa;
+  padding: 1rem;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      color: #737373;
+    }
+    button {
+      border: none;
+      background-color: #fafafa;
+      color: #737373;
+      cursor: pointer;
+    }
+  }
+  .platform {
+    form {
+      select {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        option {
+          position: relative;
+        }
+      }
+      input {
+        width: 100%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

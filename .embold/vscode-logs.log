@@ -1,0 +1,24 @@
+2023-11-05 21:03:36 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/temp
+2023-11-05 21:03:36 info: Congratulations, your extension "Embold" is now active!
+2023-11-05 21:03:36 info: Current Version Of Embold
+2023-11-05 21:03:36 info: 0.1.6
+2023-11-05 21:03:36 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/temp
+2023-11-05 21:03:37 info: Embold extension version response:
+2023-11-05 21:03:37 info: {"hasSupport":false,"version":"0.9.0.64","changeNotes":"<div> <p>Release Date: 05 May 2022 <br><span>Embold has added 6 new Java rules that will make your code more secure!</span></p> </div>"}
+2023-11-05 21:03:37 info: current version : 
+2023-11-05 21:03:37 info: latest version : 
+2023-11-05 21:03:54 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:03:54 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:03:54 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:03:54 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:04:27 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:04:27 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:04:27 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:04:27 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:04:27 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:13:53 error: SQLITE_ERROR: no such table: issues
+2023-11-05 21:26:13 error: SQLITE_ERROR: no such table: issues
+2023-11-06 18:06:13 error: SQLITE_ERROR: no such table: issues
+2023-11-06 18:06:14 error: SQLITE_ERROR: no such table: issues
+2023-11-06 20:13:52 error: SQLITE_ERROR: no such table: issues
+2023-11-12 20:48:16 error: SQLITE_ERROR: no such table: issues

@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove padding from ul, ol */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* FONT SIZE */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+body {
+  background-color: #fafafa;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 500;
+}
+
+.App {
+  padding: 1rem;
+  background-color: #fafafa;
+}
+.App nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  border-radius: 7.5px;
+  background: white;
+  margin-bottom: 1rem;
+}
+.App nav > div {
+  text-align: center;
+}
+.App nav .pages {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.App nav .pages form {
+  display: flex;
+  flex-direction: row;
+}
+.App nav .pages form input {
+  display: none;
+}
+.App nav .pages form label {
+  padding: 0.5rem 1rem;
+  margin-inline: 0.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #737373;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.App nav .pages form input:checked + label {
+  background-color: rgba(99, 60, 255, 0.15);
+  color: #633cff;
+}
+.App nav .preview a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #633cff;
+  border-radius: 7px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+main .left {
+  display: none;
+}
+@media (min-width: 1024px) {
+  main .left {
+    display: initial;
+    width: 40%;
+  }
+  main .right {
+    width: 60%;
+  }
+}
+
+.links {
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border-radius: 7px;
+}
+.links > div + div {
+  margin-top: 2rem;
+}
+.links .header h3 {
+  margin-bottom: 0.5rem;
+}
+.links .create button {
+  width: 100%;
+  color: #633cff;
+  background-color: white;
+  border: 1px solid #633cff;
+  padding-block: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.phone {
+  background-color: white;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  position: sticky;
+  top: 0; /* Stick to the top edge of the nearest scrolling ancestor */
+  padding: 20px;
+  z-index: 100;
+}
+.phone svg rect {
+  cursor: pointer;
+}
+
+.second {
+  top: 342px;
+}
+
+text {
+  border: 1px solid;
+}
+
+.profileDetails {
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border-radius: 7px;
+}
+.profileDetails > div + div {
+  margin-top: 2rem;
+}
+.profileDetails .header h3 {
+  margin-bottom: 0.5rem;
+}
+.profileDetails .header p {
+  color: #737373;
+}
+.profileDetails .upload {
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.profileDetails .upload form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profileDetails .upload form label {
+  aspect-ratio: 1;
+  width: 10rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0px 1px 5px 1px lightgray;
+  border-radius: 10px;
+}
+.profileDetails .upload form label div {
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  color: white;
+}
+.profileDetails .upload form label div svg path {
+  fill: white;
+}
+.profileDetails .upload form input {
+  display: none;
+}
+.profileDetails .information form .inputs {
+  background-color: #fafafa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.profileDetails .information form .inputs div {
+  display: flex;
+  justify-content: space-between;
+}
+.profileDetails .information form .inputs div label {
+  color: #737373;
+}
+.profileDetails .information form .inputs div input {
+  width: 66%;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+}
+.profileDetails .information form .inputs div input:focus {
+  border: 1px solid purple;
+  box-shadow: 0px 0px 10px 1px #633cff;
+  outline: none;
+}
+.profileDetails .information form .inputs div + div {
+  margin-top: 1rem;
+}
+.profileDetails .information form .button {
+  margin-top: 5rem;
+  border-top: 1px solid #737373;
+  padding-top: 1rem;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.profileDetails .information form .button button {
+  position: absolute;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background: #633cff;
+  border: none;
+  border-radius: 7px;
+}
+
+.newLink {
+  background-color: #fafafa;
+  padding: 1rem;
+}
+.newLink .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.newLink .header h4 {
+  color: #737373;
+}
+.newLink .header button {
+  border: none;
+  background-color: #fafafa;
+  color: #737373;
+  cursor: pointer;
+}
+.newLink .platform form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.newLink .platform form select option {
+  position: relative;
+}
+.newLink .platform form input {
+  width: 100%;
+  padding: 0.5rem;
+}/*# sourceMappingURL=main.css.map */

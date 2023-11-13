@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  background-color: #fafafa;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 500;
+}
+.App {
+  padding: 1rem;
+  background-color: #fafafa;
+  nav {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-radius: 7.5px;
+    background: white;
+    margin-bottom: 1rem;
+    > div {
+      text-align: center;
+    }
+    .pages {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      form {
+        display: flex;
+        flex-direction: row;
+        input {
+          display: none;
+        }
+        label {
+          padding: 0.5rem 1rem;
+          margin-inline: 0.25rem;
+          border-radius: 5px;
+          cursor: pointer;
+          color: #737373;
+          display: flex;
+          gap: 0.25rem;
+          align-items: center;
+        }
+        input:checked + label {
+          background-color: rgba($color: #633cff, $alpha: 0.15);
+          color: #633cff;
+        }
+      }
+    }
+    .preview {
+      a {
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border: 1px solid #633cff;
+        border-radius: 7px;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  .left {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .left {
+      display: initial;
+      width: 40%;
+    }
+    .right {
+      width: 60%;
+    }
+  }
+}

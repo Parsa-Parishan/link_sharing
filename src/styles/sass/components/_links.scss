@@ -1,0 +1,24 @@
+.links {
+  padding: 2rem 1.5rem;
+  background-color: white;
+  border-radius: 7px;
+  > div + div {
+    margin-top: 2rem;
+  }
+  .header {
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .create {
+    button {
+      width: 100%;
+      color: #633cff;
+      background-color: white;
+      border: 1px solid #633cff;
+      padding-block: 0.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}

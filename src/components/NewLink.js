@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-export default function NewLink({ link, removeLinks, updateLink, list }) {
-  const selectedElement =
-    list[list.findIndex((element) => element.id === link.id)];
+export default function NewLink({ link, removeLinks, updateLink }) {
+  const { id, platform: initialPlatform, links: initialLinks } = link;
 
-
-  const [platform, setPlatform] = useState(selectedElement.platform || "github");
-  const [address, setAddress] = useState(selectedElement.links || "");
+  const [platform, setPlatform] = useState(initialPlatform);
+  const [address, setAddress] = useState(initialLinks || "");
 
   const handleChange = (e) => {
     setPlatform(e.target.value);

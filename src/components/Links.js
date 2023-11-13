@@ -1,22 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewLink from "./NewLink";
 
 export default function Links({ setList, list }) {
   const [idCounter, setIdCounter] = useState(1);
 
   function generateUniqueId() {
-    setIdCounter(() => idCounter + 1);
+    setIdCounter((prevId) => prevId + 1);
   }
+
+  useEffect(() => {
+    // This code will run only once when the component mounts
+    // Initialize idCounter to the last used id in the list + 1
+    const lastUsedId = list.length > 0 ? list[0].id : 0;
+    setIdCounter(lastUsedId + 1);
+  }, [list]);
 
   const handleClick = () => {
     const newId = idCounter;
     const newLinks = {
       id: newId,
-      platform: "",
+      platform: "github",
       links: "",
     };
     generateUniqueId();
     setList((prev) => [newLinks, ...prev]);
+    console.log(list);
   };
 
   const removeLinks = (e) => {
@@ -24,8 +32,8 @@ export default function Links({ setList, list }) {
   };
 
   const updateLink = (id, platform, address) => {
-    setList((prevLinks) =>
-      prevLinks.map((link) =>
+    setList((prev) =>
+      prev.map((link) =>
         link.id === id ? { ...link, platform, links: address } : link
       )
     );

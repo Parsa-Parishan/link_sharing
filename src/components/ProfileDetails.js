@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { FaRegSave } from "react-icons/fa";
 
 export default function ProfileDetails({ setProfile, profile }) {
-
   const [labelBackground, setLabelBackground] = useState("");
+  const [alert, setAlert] = useState(false);
 
   const handleFileChange = (event) => {
     // Get the selected file from the input
@@ -14,14 +15,11 @@ export default function ProfileDetails({ setProfile, profile }) {
       ...prev,
       picture: file,
     }));
-
   };
 
   useEffect(() => {
-
     if (profile.picture) {
       const reader = new FileReader();
-      console.log(reader)
       reader.onload = () => {
         setLabelBackground(`url(${reader.result})`);
         setProfile((prev) => ({
@@ -31,8 +29,7 @@ export default function ProfileDetails({ setProfile, profile }) {
       };
       reader.readAsDataURL(profile.picture);
     }
-
-  }, [profile.picture])
+  }, [profile.picture]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +44,10 @@ export default function ProfileDetails({ setProfile, profile }) {
     setProfile((prev) => ({
       ...prev,
     }));
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 4000);
   };
 
   return (
@@ -134,6 +135,11 @@ export default function ProfileDetails({ setProfile, profile }) {
             <button type="submit">Submit</button>
           </div>
         </form>
+      </div>
+      <div className={`alert ${alert && "appear"}`}>
+        <p>
+          <FaRegSave /> Your changes have been successfully saved!
+        </p>
       </div>
     </div>
   );

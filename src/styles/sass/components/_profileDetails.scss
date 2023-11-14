@@ -2,6 +2,7 @@
   padding: 2rem 1.5rem;
   background-color: white;
   border-radius: 7px;
+  position: relative;
   > div + div {
     margin-top: 2rem;
   }
@@ -93,5 +94,35 @@
         }
       }
     }
+  }
+
+  .alert {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    z-index: 10;
+    border: 1px solid;
+    background-color: #737373;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    display: none;
+    animation: alert 4s ease-in-out; /* Adjust the duration and timing function as needed */
+  }
+  .appear {
+    display: initial !important;
+  }
+}
+
+@keyframes alert {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

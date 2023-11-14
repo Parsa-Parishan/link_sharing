@@ -4,6 +4,7 @@ import { FaLink, FaUserCircle } from "react-icons/fa";
 import Links from "./components/Links";
 import Phone from "./components/Phone";
 import ProfileDetails from "./components/ProfileDetails";
+import Preview from "./components/Preview";
 
 function App() {
   const [view, setView] = useState("links");
@@ -14,9 +15,16 @@ function App() {
     email: "",
     picture: null,
   });
+  const [preview, setPreview] = useState(false);
 
   const handleChange = (e) => {
     setView(() => e.target.value);
+    setPreview(false);
+  };
+
+  const handlePreview = () => {
+    setView(() => null);
+    setPreview(true);
   };
 
   return (
@@ -55,21 +63,22 @@ function App() {
               </label>
             </form>
           </div>
-          <div className="preview">
+          <div className="preview" onClick={handlePreview}>
             <a href="#">Preview</a>
           </div>
         </nav>
       </header>
       <main>
         <div className="left">
-          <Phone list={list} profile={profile} />
+          {!preview && <Phone list={list} profile={profile} />}
         </div>
         <div className="right">
           {view == "links" ? (
             <Links setList={setList} list={list} />
-          ) : (
+          ) : view == "profile details" ? (
             <ProfileDetails setProfile={setProfile} profile={profile} />
-          )}
+          ) : null}
+          {preview && <Preview list={list} profile={profile} />}
         </div>
       </main>
     </div>

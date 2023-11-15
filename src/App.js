@@ -1,6 +1,7 @@
 import { useState } from "react";
 import iphone from "./assets/logo-devlinks-large.svg";
-import { FaLink, FaUserCircle } from "react-icons/fa";
+import logo from "./assets/logo-devlinks-small.svg";
+import { FaLink, FaUserCircle, FaEye } from "react-icons/fa";
 import Links from "./components/Links";
 import Phone from "./components/Phone";
 import ProfileDetails from "./components/ProfileDetails";
@@ -32,7 +33,8 @@ function App() {
       <header>
         <nav>
           <div className="logo">
-            <img src={iphone} alt="" />
+            <img src={iphone} alt="" className="large-logo" />
+            <img src={logo} alt="" className="small-logo" />
           </div>
           <div className="pages">
             <form>
@@ -64,7 +66,10 @@ function App() {
             </form>
           </div>
           <div className="preview" onClick={handlePreview}>
-            <a href="#">Preview</a>
+            <a href="#">
+              <FaEye />
+              <p>Preview</p>
+            </a>
           </div>
         </nav>
       </header>

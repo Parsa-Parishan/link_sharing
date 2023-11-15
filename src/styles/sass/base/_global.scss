@@ -23,6 +23,19 @@ body {
     > div {
       text-align: center;
     }
+    .logo {
+      img.large-logo {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        img.small-logo {
+          display: none;
+        }
+        img.large-logo {
+          display: initial;
+        }
+      }
+    }
     .pages {
       position: absolute;
       left: 50%;
@@ -43,6 +56,14 @@ body {
           display: flex;
           gap: 0.25rem;
           align-items: center;
+          p {
+            display: none;
+          }
+          @media (min-width: 768px) {
+            p {
+              display: initial;
+            }
+          }
         }
         input:checked + label {
           background-color: rgba($color: #633cff, $alpha: 0.15);
@@ -56,6 +77,17 @@ body {
         padding: 0.5rem 1rem;
         border: 1px solid #633cff;
         border-radius: 7px;
+        p {
+          display: none;
+        }
+        @media (min-width: 768px) {
+          p {
+            display: initial;
+          }
+          svg {
+            display: none;
+          }
+        }
       }
     }
   }

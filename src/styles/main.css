@@ -144,6 +144,17 @@ body {
 .App nav > div {
   text-align: center;
 }
+.App nav .logo img.large-logo {
+  display: none;
+}
+@media (min-width: 768px) {
+  .App nav .logo img.small-logo {
+    display: none;
+  }
+  .App nav .logo img.large-logo {
+    display: initial;
+  }
+}
 .App nav .pages {
   position: absolute;
   left: 50%;
@@ -167,6 +178,14 @@ body {
   gap: 0.25rem;
   align-items: center;
 }
+.App nav .pages form label p {
+  display: none;
+}
+@media (min-width: 768px) {
+  .App nav .pages form label p {
+    display: initial;
+  }
+}
 .App nav .pages form input:checked + label {
   background-color: rgba(99, 60, 255, 0.15);
   color: #633cff;
@@ -176,6 +195,17 @@ body {
   padding: 0.5rem 1rem;
   border: 1px solid #633cff;
   border-radius: 7px;
+}
+.App nav .preview a p {
+  display: none;
+}
+@media (min-width: 768px) {
+  .App nav .preview a p {
+    display: initial;
+  }
+  .App nav .preview a svg {
+    display: none;
+  }
 }
 
 main {
@@ -464,6 +494,11 @@ text {
 }
 .previewCom .bottom .mock .list a div p svg {
   margin-right: 0.5rem;
+}
+@media (max-width: 768px) {
+  .previewCom .bottom .mock {
+    width: 100%;
+  }
 }
 
 .twitter {

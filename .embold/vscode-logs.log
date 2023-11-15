@@ -43,3 +43,16 @@
 2023-11-13 21:41:19 error: SQLITE_ERROR: no such table: issues
 2023-11-13 21:41:19 error: SQLITE_ERROR: no such table: issues
 2023-11-13 21:41:23 error: SQLITE_ERROR: no such table: issues
+2023-11-13 21:43:43 error: SQLITE_ERROR: no such table: issues
+2023-11-13 21:43:43 error: SQLITE_ERROR: no such table: issues
+2023-11-13 21:43:43 error: SQLITE_ERROR: no such table: issues
+2023-11-13 21:44:35 error: SQLITE_ERROR: no such table: issues
+2023-11-14 20:27:54 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/temp
+2023-11-14 20:27:54 info: Congratulations, your extension "Embold" is now active!
+2023-11-14 20:27:54 info: Current Version Of Embold
+2023-11-14 20:27:54 info: 0.1.6
+2023-11-14 20:27:54 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/temp
+2023-11-14 20:27:55 info: Embold extension version response:
+2023-11-14 20:27:55 info: {"hasSupport":false,"version":"0.9.0.64","changeNotes":"<div> <p>Release Date: 05 May 2022 <br><span>Embold has added 6 new Java rules that will make your code more secure!</span></p> </div>"}
+2023-11-14 20:27:55 info: current version : 
+2023-11-14 20:27:55 info: latest version : 
